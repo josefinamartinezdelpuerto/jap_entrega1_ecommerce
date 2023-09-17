@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-
-  
   const url = `https://japceibal.github.io/emercado-api/cats_products/${localStorage.getItem(
     "catID"
   )}.json`;
@@ -21,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const products = data.products;
         spanproducts.innerText = data.catName;
         mostrarArticulos(products);
-        let stringproducts = JSON.stringify(products)
-        sessionStorage.setItem("productsArray", stringproducts)
+        let stringproducts = JSON.stringify(products);
+        sessionStorage.setItem("productsArray", stringproducts);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -37,22 +34,25 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // Busqueda
   document.getElementById("busqueda-input").addEventListener("keyup", () => {
-    debounce(()=>{actualizarArticulos();
+    debounce(() => {
+      actualizarArticulos();
     }, 50);
   });
   // Orden
   document.getElementById("orden-productos").addEventListener("mouseup", () => {
-    debounce(()=>{actualizarArticulos();
+    debounce(() => {
+      actualizarArticulos();
     }, 50);
   });
   // Filtro
   document.getElementById("filtro-precio-btn").addEventListener("click", () => {
-    debounce(()=>{actualizarArticulos();
+    debounce(() => {
+      actualizarArticulos();
     }, 50);
   });
 
   //* Mostrar articulos
-   function mostrarArticulos(prodArr) {
+  function mostrarArticulos(prodArr) {
     ordenarArticulos(prodArr);
     let filteredProdArr = filtrarArticulos(prodArr);
 
@@ -232,8 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
    se atrasa y causa que esté un input atrás. Es decir, si clickeas A-Z no pasa nada, pero si luego
    clickeas otra cosa se aplica A-Z*/
 
-   //TODO: probar con internet de la feria para ver si 50ms es suficiente
-
+  //TODO: probar con internet de la feria para ver si 50ms es suficiente
 
   let debounceTimeout;
 
