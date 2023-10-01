@@ -21,6 +21,7 @@
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous">
+    <link href="css/cart.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -51,7 +52,7 @@
       </nav>
       <main>
         <div class="x" id="productInfo">
-          <h2 class="nombre-product" id="nombreProduct"></h2>
+          <h2 class="nombre-product texto-modo-oscuro" id="nombreProduct"></h2>
           <hr />
 
           <div class="col-xxl-5 col-xl-5 col-lg-4 col-md-12 col-sm-12"
@@ -59,24 +60,29 @@
             <div class="card">
               <div class="card-body">
 
-                <h3 class="subtitlo-producto card-title">Precio</h3>
-                <p class="texto-subtitulo card-text" id="precioProducto"></p>
+                <h3 class="subtitlo-producto card-title texto-modo-oscuro">Precio</h3>
+                <p class="texto-subtitulo card-text texto-modo-oscuro"
+                  id="precioProducto"></p>
                 <hr>
-                <h3 class="subtitlo-producto card-title">Descripción</h3>
-                <p class="texto-subtitulo card-text" id="descripcionProducto"></p>
+                <h3 class="subtitlo-producto card-title texto-modo-oscuro">Descripción</h3>
+                <p class="texto-subtitulo card-text texto-modo-oscuro"
+                  id="descripcionProducto"></p>
                 <hr>
-                <h3 class="subtitlo-producto card-title">Categoria</h3>
-                <p class="texto-subtitulo card-text" id="categoriaProducto"></p>
+                <h3 class="subtitlo-producto card-title texto-modo-oscuro">Categoria</h3>
+                <p class="texto-subtitulo card-text texto-modo-oscuro"
+                  id="categoriaProducto"></p>
                 <hr>
-                <h3 class="subtitlo-producto card-title">Cantidad de vendidos</h3>
-                <p class="texto-subtitulo card-text" id="cantidadProducto"></p>
+                <h3 class="subtitlo-producto card-title texto-modo-oscuro">Cantidad
+                  de vendidos</h3>
+                <p class="texto-subtitulo card-text texto-modo-oscuro"
+                  id="cantidadProducto"></p>
               </div>
             </div>
           </div>
 
           <div class="col-xxl-6 col-xl-6 col-lg-8 col-md-12 col-sm-12"
             id="fotosDeProducto">
-            <div class="card border-0">
+            <div class="card border-0 carrusel-oscuro">
               <ul class="carrusel-producto" id="carruselProducto"
                 style="width: 45vw;"></ul>
             </div>
@@ -88,19 +94,20 @@
     </div>
     <div id="loginPopup" class="popup">
       <div class="popup-content">
-        <p>Debes estar logueado para acceder a este contenido.</p>
-        <button id="loginButton">Iniciar Sesión</button>
+        <p class="texto-modo-oscuro">Debes estar logueado para acceder a este
+          contenido.</p>
+        <button class="texto-modo-oscuro" id="loginButton">Iniciar Sesión</button>
       </div>
     </div>
 
     <div class="comment-box">
       <div id="comentarios">
-        <h2 class="comentarios-h2">Comentarios</h2>
+        <h2 class="comentarios-h2 texto-modo-oscuro">Comentarios</h2>
         <!-- Los comentarios se mostrarán aquí -->
       </div>
 
       <div id="nuevoComentario">
-        <h2>Comentar</h2>
+        <h2 class="texto-modo-oscuro">Comentar</h2>
         <textarea id="commentInput" class="commentInput"
           placeholder="Dejanos un comentario!" rows="4" cols="30"></textarea>
         <div>
@@ -120,9 +127,19 @@
       </div>
     </div>
 
+    <!--carousel de productos relacionados-->
+    <div class="container">
+      <h3 class="texto-modo-oscuro">Algunos Productos similares</h3>
+      <div class="row" id="productosSimilares">
+
+      </div>
+
+      <!--aca van los productos. Ver product-info.js-->
+    </div>
+
     <footer class="text-muted">
       <div class="container">
-        <p class="float-end">
+        <p class="float-end texto-modo-oscuro">
           <a href="#">Volver arriba</a>
         </p>
         <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/"
@@ -136,6 +153,8 @@
     <script src="js/loginPopUp.js"></script>
     <script src="js/product-info.js"></script>
     <script src="js/loginPopupMenu.js"></script>
-  </body>
+    <script src="js/cart.js"></script>
+    <script src="https://kit.fontawesome.com/fdc46ffa07.js" crossorigin="anonymous"></script>
+</body>
 
 </html>
