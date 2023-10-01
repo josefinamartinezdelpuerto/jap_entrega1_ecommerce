@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Cargar foto usuario
   let fotoUsuario =
     localStorage.getItem(`${userEmail}-icon`) ||
-    "../img/iconos_perfil/desconocido.png";
+    "img/iconos_perfil/desconocido.png";
 
   // Crear elemento nav
   const loginNavElement = document.createElement("li");
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let iconImg = document.createElement("img");
     iconButton.classList.add("opcion-icono");
     iconButton.setAttribute("data-icon", `img/iconos_perfil/${element}`);
-    iconImg.src = `img/iconos_perfil${element}`;
+    iconImg.src = `img/iconos_perfil/${element}`;
 
     iconButton.appendChild(iconImg);
 
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const logoutBtn = document.getElementById("login-logout-btn");
   logoutBtn.addEventListener("click", () => {
     localStorage.removeItem("email");
-    window.location.href = "login.html";
+    window.location.href = "../login.html";
   });
 });
 
