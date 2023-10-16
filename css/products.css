@@ -225,7 +225,8 @@ body {
   border-radius: 20px;
   background-color: #b8c0ff;
   overflow: hidden;
-  font-size: 0; 
+  font-size: 0; /*! Importante, sino aparecen espacios entre los botones*/
+  /* Para cambiar font-size cambiar el de .prod-radio-label */
 }
 
 .prod-radio {
