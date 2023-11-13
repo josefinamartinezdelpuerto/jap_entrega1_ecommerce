@@ -125,6 +125,16 @@ document.addEventListener("DOMContentLoaded", () => {
   function handleCustomIconUpload(event) {
     const customIconFile = event.target.files[0];
     if (customIconFile) {
+      let reader = new FileReader();
+
+      reader.readAsDataURL(customIconFile);
+
+      reader.onload = () => {
+        let base64Custom = reader.result;
+        console.log(userEmail);
+        localStorage.setItem(`${userEmail}-icon`, base64Custom);
+        window.location.reload();
+      };
     }
   }
   // Cambiar foto perfil
